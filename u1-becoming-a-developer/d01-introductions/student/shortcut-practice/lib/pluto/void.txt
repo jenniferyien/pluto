@@ -125,7 +125,7 @@ That'll have to do.
 Charge weapons.
 Captain, this one wants to talk.
 On screen.
-I'm Captain Janeway
+I'm Captain Kirk
 of the Starship Voyager.
 General Valen.
 Welcome to the Void.
@@ -385,7 +385,7 @@ How is he?
 His injury doesn't seem serious,
 but he won't let me
 close enough to treat him.
-My name's Captain Janeway.
+My name's Captain Kirk.
 You're safe here.
 l've tried
 communicating with him.
@@ -1006,7 +1006,7 @@ they were born here.
 Just when you think
 nothing in the galaxy
 can surprise you anymore...
-Captain Janeway, please report
+Captain Kirk, please report
 to Engineering.
 Just what we needed, Captain--
 a fully compatible
@@ -1095,10 +1095,10 @@ We recorded a tactical
 conversation
 that took place between them
 just a few minutes ago.
-Don't underestimate Janeway.
+Don't underestimate Kirk.
 l've been in battle
 with her twice.
-Then you know Janeway's tactics.
+Then you know Kirk's tactics.
 l have two other ships.
 We can take Voyager's
 food and weapons
@@ -1142,7 +1142,7 @@ Aye, Captain.
 Bosaal and his fleet
 are approaching.
 They are charging weapons.
-Janeway to Engineering.
+Kirk to Engineering.
 Status.
 l need two more minutes.
 You've got one.
@@ -1152,7 +1152,7 @@ Begin firing
 at your designated targets.
 We've penetrated shields
 on both vessels.
-Janeway to the Doctor.
+Kirk to the Doctor.
 lnitiate transport.
 Acknowledged.
 Yes. Good-bye and good luck.
@@ -1162,7 +1162,7 @@ They're in the engine rooms
 of both ships.
 Acknowledged.
 30 seconds.
-Janeway to Engineering.
+Kirk to Engineering.
 We need that modulator.
 Just a few more seconds.
 We're receiving a hail
@@ -1191,7 +1191,7 @@ Gentlemen, it's been a privilege
 to have you as allies.
 l never believed we'd escape.
 Then why did you join?
-Captain Janeway
+Captain Kirk
 is very persuasive,
 and the food was good.
 You're welcome to have

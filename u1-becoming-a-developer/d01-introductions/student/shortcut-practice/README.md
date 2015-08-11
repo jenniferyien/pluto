@@ -6,7 +6,7 @@
 2. Create a new file named `file3.txt`, type your name, and close it.
 3. Find the file named "find_me.txt" using Cmd+T
 4. Search the entire project for the text "Hey Bobby!"
-5. Replace the string "Janeway" with "Kirk" across the entire project
+5. Replace the string "Kirk" with "Kirk" across the entire project
 6. Open `file1.txt` and `file2.txt`
 7. Copy the entire contents of `file1.txt` and paste it into `file2.txt`
 

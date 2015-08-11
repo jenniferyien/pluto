@@ -1,0 +1,30 @@
+mkdir star_wars
+mkdir star_wars/empire star_wars/rebillion
+touch star_wars/empire/darth_vader.txt
+open star_wars/empire/darth_vader.txt
+echo "...heavy breathing..." >> star_wars/empire/darth_vader.txt
+// enter text "...heavy breathing..."
+// command + S
+// command + Q
+touch star_wars/empire/emperor_palpatine.txt
+mkdir star_wars/empire/death_star
+mv star_wars/empire/darth_vader.txt star_wars/empire/death_star
+touch star_wars/rebellion/princess_leia.txt
+open star_wars/rebellion/princess_leia.txt
+echo "Help me, Obi-Wan... You're my only hope." >> star_wars/rebellion/princess_leia.txt
+// enter text "Help me, Obi-Wan... You're my only hope."
+// command + S
+// command + Q
+touch star_wars/rebillion/obi_wan.txt star_wars/rebellion/luke_skywalker.txt
+mkdir star_wars/rebellion/millenium_falcon
+touch star_wars/rebillion/millenium_falcon/han_solo.txt star_wars/rebillion/millenium_falcon/chewy.txt
+mv star_wars/rebellion/*.txt star_wars/rebellion/millenium_falcon
+mv star_wars/rebellion/millenium_falcon star_wars/empire/death_star
+mv star_wars/empire/death_star/millenium_falcon/*.txt star_wars/empire/death_star
+rm star_wars/empire/death_star/obi_wan.txt
+enter yes
+mv star_wars/empire/death_star/*.txt star_wars/empire/death_star/millenium_falcon
+mv star_wars/empire/death_star/millenium_falcon/darth_vader.txt star_wars/empire/darth_vader
+mv star_wars/empire/death_star/millenium_falcon star_wars/rebellion
+mv star_wars/empire/death_vader.txt star_wars/empire
+rm -rf star_wars/empire/death_star
