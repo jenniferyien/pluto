@@ -26,3 +26,12 @@ var dlTime = (download / modem);
 //60 sec in 1 min
 // 60 min in 1 hour
 alert("It would take " + dlTime + " sec or " + (dlTime/60) + " min or " + (dlTime/60)/60 + " hr to download a " + download + "GB ripped copy of Blade Runner over a $200 56k/s modem from 1995.")
+
+//Part 5 A Long Long Long time
+//Portland, Maine to Portland, Oregon = 3187 miles taking I-80 and I-90
+//Beatles White Album 2 disc is 1 hr 32 min 22 sec = 5542 sec
+var album = 5542 //sec
+// 1 hr = 3600 sec
+var drive = 55/3600 //x miles in 1 sec
+var trip = 3187/drive //= how many secs in the drive
+alert("You can listen to the Beatle's While Album 2 disc for " + trip/album + " times ask you drive from Portland, ME to Portland, OR on I-80 and I-90.")
