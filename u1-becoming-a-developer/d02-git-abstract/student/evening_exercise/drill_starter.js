@@ -34,4 +34,16 @@ var album = 5542 //sec
 // 1 hr = 3600 sec
 var drive = 55/3600 //x miles in 1 sec
 var trip = 3187/drive //= how many secs in the drive
-alert("You can listen to the Beatle's While Album 2 disc for " + trip/album + " times ask you drive from Portland, ME to Portland, OR on I-80 and I-90.")
+alert("You can listen to the Beatle's White Album 2 disc for " + trip/album + " times as you drive from Portland, ME to Portland, OR on I-80 and I-90.")
+
+//Part 6 Adventure Time!
+var x = prompt("Please give me a noun.");
+var y = prompt("Please give me a past verb.");
+var z = prompt("Please give me a noun.");
+var aa = prompt("Please give me a past verb.");
+var bb = prompt("Please give me a noun.");
+var cc = prompt("Please give me a verb");
+var dd = prompt("Please give me a unit of time");
+var ee = prompt("Please give me a adjective.");
+var ff = prompt("Please give me a past verb.");
+alert("Today I went to go get " + x + " from the kitchen, but when I " + y + " the " + z + " was empty. I " + aa + " whether I should go downstairs to buy " + bb + " or simply " + cc + " to the realities of my calendar. Within a " + dd + ", I knew there was no time before my next meeting, filled my " + ee + " cup with hot water and " + ff + " to work.");
