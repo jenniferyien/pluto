@@ -1,17 +1,23 @@
 # Submitting Homework
 
-Do the following from somewhere within your `code/wdi/pluto` directory.
-
-1. Whenever you have completed a meaningful chunk of work:
+## Getting your Homework
 
 ```bash
-# ~/code/wdi/pluto/u2-how-the-internet-works
-git add -A .
-git commit -m 'submitting hw for w01d05 (or whatever week and day the hw was assigned)'
+  git pull upstream master
 ```
 
-2. When you're finished for the night, submit your HW
+At the end of each day, you'll be asked to pull from the class repo, which will hopefully contain your homework prompt.
 
-```bash
-submit_hw
-```
+Complete all of the required parts, and if you finish early try to do the bonus parts. But remember that sleep is a priority and should not be sacrificed.
+
+When you're done, add and commit your code to git, and then push it to your Github repo.
+
+## Don't Forget to Submit!
+
+To submit homework, submit a GitHub issue on the **class** repo with a URL to **your** fork. Don't forget:
+* URL to your submission
+* Comfortability [0 to 5]
+* Completeness [0 to 5]
+* What was a win?
+* What was a challenge?
+* Any other comments/questions?
