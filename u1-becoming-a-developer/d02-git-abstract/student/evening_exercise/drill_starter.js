@@ -17,3 +17,12 @@ var coffeecup = personWeight * .63;
 //therefore 63 cups of coffee will kill a person that is 100 pounds
 // 1lb = .63 cups of coffee
 alert("It would take " + coffeecup + " cups of coffee to kill YOU.");
+
+//Part 4 Old Modems
+var download = 25
+var modem = 56*(1.25 * Math.pow(10, -7));
+//conversion 1 kilobit = 1.25e-7 GB
+var dlTime = (download / modem);
+//60 sec in 1 min
+// 60 min in 1 hour
+alert("It would take " + dlTime + " sec or " + (dlTime/60) + " min or " + (dlTime/60)/60 + " hr to download a " + download + "GB ripped copy of Blade Runner over a $200 56k/s modem from 1995.")
