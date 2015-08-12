@@ -1,15 +1,15 @@
 //Part 1 Pythagorean Theorem
-var side1 = prompt("What is the length of the first side?");
-var side2 = prompt("What is the length of the second side?");
+var side1 = parseInt(prompt("What is the length of the first side?"));
+var side2 = parseInt(prompt("What is the length of the second side?"));
 alert("The length of the triangle with sides of length " + side1 + " and " + side2 + " is " + Math.sqrt(Math.pow(side1,2) + Math.pow(side2,2)) + ".");
 
 //Part 2 Basic Conversion - Pounds to kg
-var lbtokg = prompt("Give a weight in pounds:");
+var lbtokg = parseInt(prompt("Give a weight in pounds:"));
 var conversion = lbtokg * 0.453592;
 alert(lbtokg + " pounds is equal to " + conversion + " kg.");
 
 //Part 3 Killer Caffeine
-var personWeight = prompt("How much do you weigh?");
+var personWeight = parseInt(prompt("How much do you weigh?"));
 var coffeecup = personWeight * .63;
 //8oz cup = 1 cup of coffee = 95mg
 // 6 g = 6000mg
@@ -47,3 +47,12 @@ var dd = prompt("Please give me a unit of time");
 var ee = prompt("Please give me a adjective.");
 var ff = prompt("Please give me a past verb.");
 alert("Today I went to go get " + x + " from the kitchen, but when I " + y + " the " + z + " was empty. I " + aa + " whether I should go downstairs to buy " + bb + " or simply " + cc + " to the realities of my calendar. Within a " + dd + ", I knew there was no time before my next meeting, filled my " + ee + " cup with hot water and " + ff + " to work.");
+
+//Part 7 Happy New Year Plutos
+//4.67 billion miles from pluto to earth
+//light travels at 670,616,629 miles per hour
+var plutoToEarth = 4.67 * Math.pow(10, 9);
+var lightTravel = 670616629 //miles per hour
+var messageTime = (plutoToEarth/lightTravel)/24;
+//24 hours in a day
+alert("My parents should send their Happy New Years message to me in " + messageTime + "Earth days.");
