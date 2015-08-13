@@ -32,7 +32,6 @@ while(true) {
             var solution = Math.pow(frstOper,secOper);
             break;
       }
-
     window.alert("The solution to " + frstOper + " " + userInput + " " + secOper + " is " + solution + ".");
   } else if(userInput === '^1/2' || userInput === 'sin' || userInput === 'tan' || userInput === 'cos'){
     var Oper = parseInt(prompt("Enter operand:"),10);
