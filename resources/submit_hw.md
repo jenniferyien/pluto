@@ -17,7 +17,7 @@ When you're done, add and commit your code to git, and then push it to your Gith
 To submit homework, submit a GitHub issue on the **class** repo with a URL to **your** fork. Don't forget:
 * URL to your submission
 * Comfortability [0 to 5]
-* Completeness [0 to 5]
+* Completeness [number of parts finished]
 * What was a win?
 * What was a challenge?
 * Any other comments/questions?
