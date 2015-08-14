@@ -54,3 +54,14 @@ function toonify(accent, sentence){
 
 toonify("daffy", "so you smell like sausage");
 toonify("elmer", "where is the rabbit?");
+
+//Round 4
+function digitSum(num){
+  var string = num.toString();
+  var sum = 0;
+  for(var i = 0; i < string.length; i++){
+    sum = sum + parseInt(string[i]);
+  }
+  return sum;
+}
+digitSum(24);
