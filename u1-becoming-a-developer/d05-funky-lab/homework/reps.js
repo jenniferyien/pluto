@@ -22,3 +22,13 @@ function fizzbuzzer(number){
   }
 }
 fizzbuzzer(5);
+
+//Round 2
+function transmogrifier(a,b,c){
+  var transmogrified = Math.pow((a * b),c);
+  return transmogrified;
+}
+transmogrifier(5, 3, 2); //225
+transmogrifier(5, 4, 3); //8000
+transmogrifier(13, 12, 5); //92389579776
+transmogrifier(42, 13, 7); //14466001271480793000
