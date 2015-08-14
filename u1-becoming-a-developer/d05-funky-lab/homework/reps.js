@@ -65,3 +65,18 @@ function digitSum(num){
   return sum;
 }
 digitSum(24);
+
+//Round 5
+function wordReverse(sentence){
+  var sentArray = sentence.split(" ");
+  var newArray = [];
+  for(var i=0; i < sentArray.length; i++){
+    newArray.unshift(sentArray[i]);
+  }
+  newArray = newArray.toString();
+  newArray = newArray.split(',').join(' ');
+  return newArray;
+}
+
+wordReverse("Now I know what a TV dinner feels like");
+wordReverse("Put Hans back on the line");
