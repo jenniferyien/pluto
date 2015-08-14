@@ -80,3 +80,26 @@ function wordReverse(sentence){
 
 wordReverse("Now I know what a TV dinner feels like");
 wordReverse("Put Hans back on the line");
+
+//Round 6
+function letterReverse(sentence){
+  var sent = sentence.split(" ");
+  var newSent = [];
+  for(var i=0; i < sent.length; i++){
+    var word = sent[i];
+    var wordString = word.toString().split();
+    var newWord = [];
+    for(var y = 0; y < word.length; y++){
+      newWord.unshift(word[y]);
+    }
+    newWord = newWord.toString();
+    newWord= newWord.split(',').join('');
+    newSent.push(newWord);
+  }
+    newSent = newSent.toString();
+    newSent = newSent.split(',').join(' ');
+    return newSent;
+}
+
+letterReverse("Now I know what a TV dinner feels like");
+letterReverse("Put Hans back on the line");
