@@ -103,3 +103,32 @@ function letterReverse(sentence){
 
 letterReverse("Now I know what a TV dinner feels like");
 letterReverse("Put Hans back on the line");
+
+//Round 7
+function longest(array){
+    var longestWord = [];
+    var arrayLength = [];
+    var currentWordLength = 0;
+    var index = 0;
+    for(var i = 0; i < array.length; i++){
+        arrayLength.push(array[i].length);
+        for(var y=0; y < arrayLength.length; y++){
+            if(currentWordLength > arrayLength[y]){
+                currentWordLength = currentWordLength;
+                index = arrayLength.indexOf(currentWordLength);
+            } else if(currentWordLength === arrayLength[y]){
+                currentWordLength = currentWordLength;
+                index = arrayLength.indexOf(currentWordLength);
+            } else {
+                currentWordLength = arrayLength[y];
+                index = y;
+            }
+        }
+    }
+    longestWord.push(array[index]);
+    longestWord = longestWord.toString();
+    return longestWord;
+}
+
+longest(["die", "hard", "with", "a", "vengeance"]);
+longest(["bruce", "willis", "was", "in", "other", "movies"]);
