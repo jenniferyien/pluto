@@ -1,0 +1,32 @@
+div.red-box{
+  float: left;
+  border: solid red 10px;
+  padding: 15px;
+  background-color: pink;
+  margin-right: 10px;
+}
+div.header{
+  float: left;
+  width: 960px;
+  border: solid red 10px;
+  padding: 15px;
+  background-color: pink;
+  margin: 5px;
+}
+div.left{
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+  border: solid red 10px;
+  padding: 15px;
+  background-color: pink;
+  margin: 5px;
+}
+div.main{
+  float: left;
+  width: 700px;
+  border: solid red 10px;
+  padding: 15px;
+  background-color: pink;
+  margin: 5px;
+}
