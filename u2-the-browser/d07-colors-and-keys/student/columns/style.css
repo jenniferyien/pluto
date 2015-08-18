@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  padding: 0 10px;
+}
+div.container {
+  border: solid grey 1px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+div.heroimage {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+div.body{
+  clear: both;
+}
+div.content {
+  float: left;
+  width: 29%;
+  padding: 1%;
+  margin: 1%;
+  border: solid grey 1px;
+  background-color: #ECEBEB;
+}
+div.content img{
+  max-width: 100%;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
