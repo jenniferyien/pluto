@@ -192,3 +192,19 @@ var itsDangerousToGoAlone = function(){
 }
 
 setTimeout(itsDangerousToGoAlone, 2000);
+
+//part 11
+var weWantsIt = function() {
+  // Create a div with an id of 'gollum' and add it to Mordor
+  var gollum = $('<div>');
+  gollum.attr('id','gollum');
+  var mordor = $('section article').last();
+  mordor.append(gollum);
+  // Remove The Ring from Frodo and give it to Gollum
+  gollum.append($('#the-ring'));
+  // Move Gollum into Mount Doom
+  $('#mount-doom').append($('#gollum'));
+  // Use setTimeout to delay the execution of the next function
+}
+
+setTimeout(weWantsIt, 2000);
