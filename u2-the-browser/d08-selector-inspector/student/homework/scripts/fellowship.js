@@ -100,3 +100,15 @@ var makeBuddies = function() {
 }
 
 setTimeout(makeBuddies, 2000);
+
+//Part 5
+var beautifulStranger = function() {
+  // Find the li.buddy representing "Strider"
+  var Strider = $('aside li:nth-child(5)');
+  // Change the "Strider" textnode to "Aragorn" and make its text green
+  Strider.text('Aragorn');
+  Strider.css('color','green');
+  // Use setTimeout to delay the execution of the next function
+}
+
+setTimeout(beautifulStranger, 2000);
