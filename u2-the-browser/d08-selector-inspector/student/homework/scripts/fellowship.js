@@ -121,3 +121,29 @@ var leaveTheShire = function() {
 }
 
 setTimeout(leaveTheShire, 2000);
+
+//Part 7
+var forgeTheFellowShip = function() {
+  // Create a div with an id of 'the-fellowship' within the section.land for "Rivendell"
+  var fellowship = $('<div>');
+  fellowship.attr('id', 'the-fellowship');
+  $('article:nth-child(2)').append(fellowship);
+  // Add each hobbit and buddy one at a time to 'div#the-fellowship'
+  // for(var i = 1; i < 5; i++){
+  //   var hobbit = $('#hobbits:nth-child(i)');
+  //   fellowship.append(hobbit);
+  //   alert(hobbit.toString() + "have just joined your part.");
+  // }
+  $('li.hobbit').each(function(index){
+    fellowship.append($(this));
+    alert($(this).text() + " has just joined your party.");
+  });
+  $('li.buddy').each(function(index){
+    fellowship.append($(this));
+    alert($(this).text() + " has just joined your party.");
+  });
+  // After each character is added make an alert that they have joined your party
+  // Use setTimeout to delay the execution of the next function by several seconds
+}
+
+setTimeout(forgeTheFellowShip, 2000);
