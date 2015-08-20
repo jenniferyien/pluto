@@ -10,7 +10,7 @@ var ships = [
   },
   {
     name: 'The Santa Maria',
-    lost: 1492Â
+    lost: 1492
   },
   {
     name: 'HMS Bounty',
