@@ -208,3 +208,16 @@ var weWantsIt = function() {
 }
 
 setTimeout(weWantsIt, 2000);
+
+//part 12
+var thereAndBackAgain = function() {
+  // Remove Gollum and the Ring from the document
+  $('div').remove('#gollum');
+  // Move all the hobbits back to The Shire
+  $('section article').first().append($('.hobbit'));
+  // Add the class "collapse" to Mordor
+  var mordor = $('section article').last();
+  mordor.addClass('collapse');
+}
+
+setTimeout(thereAndBackAgain, 2000);
