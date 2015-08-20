@@ -69,9 +69,7 @@ var keepItSecretKeepItSafe = function() {
   // it'll look like target.click(nazgulScreech)
   // bit of a freebie since we're not covering events until tomorrow
   var frodo = $('.hobbit').first();
-  $('#the-ring').click(function(nazgulScreech){
-    nazgulScreech();
-  });
+  $('#the-ring').on('click', nazgulScreech());
 
   //bonus
   if (jQuery('#the-ring').click() === 3){
@@ -232,10 +230,10 @@ var thereAndBackAgain = function() {
 
 setTimeout(thereAndBackAgain, 34000);
 
-$("#pauseButton").click(function() {
+$("#pauseButton").on('click',(function() {
 $(this).cycle("pause");
-});
+}));
 
-$("#resumeButton").click(function() {
+$("#resumeButton").on('click',(function() {
 $(this).cycle("resume");
-});
+}));
