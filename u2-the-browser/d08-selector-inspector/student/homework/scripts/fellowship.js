@@ -112,3 +112,12 @@ var beautifulStranger = function() {
 }
 
 setTimeout(beautifulStranger, 2000);
+
+//Part 6
+var leaveTheShire = function() {
+  // Assemble the Hobbits and move them to Rivendell
+  $('#hobbits').insertAfter($('aside'));
+  // Use setTimeout to delay the execution of the next function
+}
+
+setTimeout(leaveTheShire, 2000);
