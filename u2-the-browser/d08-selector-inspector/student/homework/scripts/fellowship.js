@@ -30,3 +30,27 @@ var makeMiddleEarth = function() {
   // makeHobbits) by several seconds
 };
 setTimeout(makeMiddleEarth, 2000);
+
+//Part 2
+var makeHobbits = function() {
+// Create a ul with an id of "hobbits"
+  var hobbitList = $('<ul>');
+  hobbitList.attr('id', 'hobbits');
+  var theShire = $('article:first-child');
+  theShire.append(hobbitList);
+  // Create li tags for each Hobbit in the hobbits array in characters.js
+  hobbits.forEach(function(hName){
+    var hCharacter = $('<li>');
+    hCharacter.addClass('hobbit');
+    hCharacter.text(hName);
+    $('#hobbits').append(hCharacter);
+  });
+  // Give each li tag a class of "hobbit"
+            //code above
+  // Set the text of each li.hobbit to one of the Hobbits in the array
+            //code above
+  // Append the ul#hobbits to the article.land representing "The Shire"
+  // (the first article tag on the page)
+};
+
+setTimeout(makeHobbits, 2000);
