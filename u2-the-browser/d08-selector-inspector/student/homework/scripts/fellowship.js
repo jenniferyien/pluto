@@ -53,7 +53,7 @@ var makeHobbits = function() {
   // (the first article tag on the page)
 };
 
-setTimeout(makeHobbits, 2000);
+setTimeout(makeHobbits, 4000);
 
 //Part 3
 
@@ -68,14 +68,24 @@ var keepItSecretKeepItSafe = function() {
   // look up .click() - https://api.jquery.com/click/ in the jQuery docs to see how this works
   // it'll look like target.click(nazgulScreech)
   // bit of a freebie since we're not covering events until tomorrow
+  var frodo = $('.hobbit').first();
   $('#the-ring').click(function(nazgulScreech){
+    nazgulScreech();
   });
+
+  //bonus
+  if (jQuery('#the-ring').click() === 3){
+    $('article:nth-child(3):before').css('height', '30%');
+    alert("The Ring has been returned to Sauron and the world is over.");
+  };
+  frodo.fadeOut('slow');
+  frodo.fadeIn(3000);
   // Add div#the-ring as a child element of the li.hobbit representing "Frodo"
-  $('.hobbit').first().append(ringDiv);
+  frodo.append(ringDiv);
   // Use setTimeout to delay the execution of the next function
 };
 
-setTimeout(keepItSecretKeepItSafe, 2000);
+setTimeout(keepItSecretKeepItSafe, 10000);
 
 //Part 4
 var makeBuddies = function() {
@@ -99,7 +109,7 @@ var makeBuddies = function() {
   // Use setTimeout to delay the execution of the next function
 }
 
-setTimeout(makeBuddies, 2000);
+setTimeout(makeBuddies, 15000);
 
 //Part 5
 var beautifulStranger = function() {
@@ -111,7 +121,7 @@ var beautifulStranger = function() {
   // Use setTimeout to delay the execution of the next function
 }
 
-setTimeout(beautifulStranger, 2000);
+setTimeout(beautifulStranger, 17000);
 
 //Part 6
 var leaveTheShire = function() {
@@ -120,7 +130,7 @@ var leaveTheShire = function() {
   // Use setTimeout to delay the execution of the next function
 }
 
-setTimeout(leaveTheShire, 2000);
+setTimeout(leaveTheShire, 19000);
 
 //Part 7
 var forgeTheFellowShip = function() {
@@ -146,7 +156,7 @@ var forgeTheFellowShip = function() {
   // Use setTimeout to delay the execution of the next function by several seconds
 }
 
-setTimeout(forgeTheFellowShip, 2000);
+setTimeout(forgeTheFellowShip, 21000);
 
 //part 8
 var theBalrog = function() {
@@ -159,7 +169,7 @@ var theBalrog = function() {
   // Use setTimeout to delay the execution of the next function
 }
 
-setTimeout(theBalrog, 2000);
+setTimeout(theBalrog, 25000);
 
 //part 9
 // Boromir's been killed by the Uruk-hai!
@@ -174,7 +184,7 @@ setTimeout(theBalrog, 2000);
   // Use setTimeout to delay the execution of the next function
 }
 
-setTimeout(hornOfGondor, 2000);
+setTimeout(hornOfGondor, 27000);
 
 //part 10
 var itsDangerousToGoAlone = function(){
@@ -191,7 +201,7 @@ var itsDangerousToGoAlone = function(){
   // Use setTimeout to delay the execution of the next function
 }
 
-setTimeout(itsDangerousToGoAlone, 2000);
+setTimeout(itsDangerousToGoAlone, 30000);
 
 //part 11
 var weWantsIt = function() {
@@ -207,7 +217,7 @@ var weWantsIt = function() {
   // Use setTimeout to delay the execution of the next function
 }
 
-setTimeout(weWantsIt, 2000);
+setTimeout(weWantsIt, 32000);
 
 //part 12
 var thereAndBackAgain = function() {
@@ -220,4 +230,12 @@ var thereAndBackAgain = function() {
   mordor.addClass('collapse');
 }
 
-setTimeout(thereAndBackAgain, 2000);
+setTimeout(thereAndBackAgain, 34000);
+
+$("#pauseButton").click(function() {
+$(this).cycle("pause");
+});
+
+$("#resumeButton").click(function() {
+$(this).cycle("resume");
+});
