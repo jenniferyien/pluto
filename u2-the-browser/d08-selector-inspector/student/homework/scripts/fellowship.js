@@ -54,3 +54,25 @@ var makeHobbits = function() {
 };
 
 setTimeout(makeHobbits, 2000);
+
+//Part 3
+
+var keepItSecretKeepItSafe = function() {
+  // Create a div with an id of 'the-ring'
+  var ringDiv = $('<div>');
+  ringDiv.attr('id', 'the-ring');
+  // Give div#the-ring a class of 'magic-imbued-jewelry'
+  ringDiv.addClass('magic-imbued-jewelry');
+  // Add an event listener so that when a user clicks on the ring,
+  // The nazgulScreech function (provided in index.html) is invoked
+  // look up .click() - https://api.jquery.com/click/ in the jQuery docs to see how this works
+  // it'll look like target.click(nazgulScreech)
+  // bit of a freebie since we're not covering events until tomorrow
+  $('#the-ring').click(function(nazgulScreech){
+  });
+  // Add div#the-ring as a child element of the li.hobbit representing "Frodo"
+  $('.hobbit').first().append(ringDiv);
+  // Use setTimeout to delay the execution of the next function
+};
+
+setTimeout(keepItSecretKeepItSafe, 2000);
