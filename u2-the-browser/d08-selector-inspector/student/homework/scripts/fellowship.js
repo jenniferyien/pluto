@@ -167,7 +167,7 @@ setTimeout(theBalrog, 2000);
   // Pop up an alert that the Horn of Gondor has been blown
   alert("The Horn of Gondor has been blown!!");
   // Put a line-through on Boromir's name
-  var boromir = $('#the-fellowship li').last()
+  var boromir = $('#the-fellowship li').last();
   boromir.css('text-decoration', 'line-through');
   // And fade Boromir's opacity to 0.3 (he lives on in spirit)
   boromir.css('opacity','0.3');
@@ -175,3 +175,20 @@ setTimeout(theBalrog, 2000);
 }
 
 setTimeout(hornOfGondor, 2000);
+
+//part 10
+var itsDangerousToGoAlone = function(){
+  // Take Frodo and Sam out of The Fellowship and move them to Mordor
+  var frodo = $('#the-fellowship li').first();
+  var sam = $('#the-fellowship li:nth-child(2)');
+  var mordor = $('section article').last();
+  mordor.append(frodo);
+  mordor.append(sam);
+  // Add a div with an id of 'mount-doom' to Mordor
+  var doom = $('<div>');
+  doom.attr('id','mount-doom');
+  mordor.append(doom);
+  // Use setTimeout to delay the execution of the next function
+}
+
+setTimeout(itsDangerousToGoAlone, 2000);
