@@ -147,3 +147,16 @@ var forgeTheFellowShip = function() {
 }
 
 setTimeout(forgeTheFellowShip, 2000);
+
+//part 8
+var theBalrog = function() {
+  // Select the "li.buddy" for "Gandalf"
+  var gandalf = $('#the-fellowship li:nth-child(5)');
+  // And change its textNode to "Gandalf the White"
+  gandalf.text('Gandalf the White');
+  // Apply style to the element, adding a "3px solid white" border to it
+  gandalf.css('border','3px solid white');
+  // Use setTimeout to delay the execution of the next function
+}
+
+setTimeout(theBalrog, 2000);
