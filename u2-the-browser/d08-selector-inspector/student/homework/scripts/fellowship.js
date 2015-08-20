@@ -104,7 +104,7 @@ setTimeout(makeBuddies, 2000);
 //Part 5
 var beautifulStranger = function() {
   // Find the li.buddy representing "Strider"
-  var Strider = $('aside li:nth-child(5)');
+  var Strider = $('aside li:nth-child(4)');
   // Change the "Strider" textnode to "Aragorn" and make its text green
   Strider.text('Aragorn');
   Strider.css('color','green');
@@ -160,3 +160,18 @@ var theBalrog = function() {
 }
 
 setTimeout(theBalrog, 2000);
+
+//part 9
+// Boromir's been killed by the Uruk-hai!
+  var hornOfGondor = function() {
+  // Pop up an alert that the Horn of Gondor has been blown
+  alert("The Horn of Gondor has been blown!!");
+  // Put a line-through on Boromir's name
+  var boromir = $('#the-fellowship li').last()
+  boromir.css('text-decoration', 'line-through');
+  // And fade Boromir's opacity to 0.3 (he lives on in spirit)
+  boromir.css('opacity','0.3');
+  // Use setTimeout to delay the execution of the next function
+}
+
+setTimeout(hornOfGondor, 2000);
