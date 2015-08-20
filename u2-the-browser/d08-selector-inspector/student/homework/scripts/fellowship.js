@@ -76,3 +76,27 @@ var keepItSecretKeepItSafe = function() {
 };
 
 setTimeout(keepItSecretKeepItSafe, 2000);
+
+//Part 4
+var makeBuddies = function() {
+  // Create an aside tag
+  var side = $('<aside>');
+  // Create a ul tag with an id of "buddies" and append it to the aside tag
+  var listBuddies = $('<ul>');
+  listBuddies.attr('id', 'buddies');
+  side.append(listBuddies);
+  // Create li tags for each buddy in the buddies array in characters.js
+  buddies.forEach(function(budName){
+    var budList = $('<li>');
+    budList.addClass('buddy');
+    budList.text(budName);
+    listBuddies.append(budList);
+  });
+  // give each li tag a class of "buddy" and append them to "ul#buddies"
+        //code above
+  // Insert the aside tag as a child element of the section.land representing "Rivendell"
+  $('article:first-child').next().append(side);
+  // Use setTimeout to delay the execution of the next function
+}
+
+setTimeout(makeBuddies, 2000);
