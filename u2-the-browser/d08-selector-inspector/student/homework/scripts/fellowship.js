@@ -69,7 +69,9 @@ var keepItSecretKeepItSafe = function() {
   // it'll look like target.click(nazgulScreech)
   // bit of a freebie since we're not covering events until tomorrow
   var frodo = $('.hobbit').first();
-  $('#the-ring').on('click', nazgulScreech());
+  $('#the-ring').on('click', function(){
+    nazgulScreech()
+  });
 
   //bonus
   if (jQuery('#the-ring').click() === 3){
