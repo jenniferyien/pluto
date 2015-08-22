@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <title> Keyboard Translator </title>
+  <link rel='stylesheet' type='text/css' href='./style.css'/>
+  <script type='text/javascript' src = "http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type='text/javascript' src ='key_translator.js'></script>
+</head>
+<body>
+  <main>
+        <header>
+                <p>It's hard to type out those icons. Enter text below and get the pretty output</p>
+        </header>
+        <div class ='enter'>
+                <h2>Useful Icons</h2>
+                <table>
+                  <tr>
+                    <td> Icon </td>
+                    <td> English Prompt </td>
+                  </tr>
+                  <tr>
+                    <td> &#8984;</td>
+                    <td> Command </td>
+                  </tr>
+                  <tr>
+                    <td> &#8677;</td>
+                    <td> Tab </td>
+                  </tr>
+                  <tr>
+                    <td> &#9166;</td>
+                    <td> Return </td>
+                  </tr>
+                  <tr>
+                    <td> &#8997;</td>
+                    <td> Option </td>
+                  </tr>
+                  <tr>
+                    <td> &#94;</td>
+                    <td> Control </td>
+                  </tr>
+                  <tr>
+                    <td> &#9099;</td>
+                    <td> ESC </td>
+                  </tr>
+                  <tr>
+                    <td> &#8592;</td>
+                    <td> Left </td>
+                  </tr>
+                  <tr>
+                    <td> &#8595;</td>
+                    <td> Down </td>
+                  </tr>
+                  <tr>
+                    <td> &#8593;</td>
+                    <td> Up </td>
+                  </tr>
+                  <tr>
+                    <td> &#8594;</td>
+                    <td> Right </td>
+                  </tr>
+                  <tr>
+                    <td> &#8679;</td>
+                    <td> Shift </td>
+                  </tr>
+                  <tr>
+                    <td> &#9167;</td>
+                    <td> Eject </td>
+                  </tr>
+                  <tr>
+                    <td> &#8682;</td>
+                    <td> CapsLock </td>
+                  </tr>
+                </table>
+        </div>
+    <form>
+      <div class ='enter texting'>
+            <p>Just type something here.</p>
+            <textarea type ='text' id='enteredText' rows = '8'></textarea>
+            <!-- <input type ='text' id='enteredText' placeholder='Enter text to get the pretty output of icons'/> -->
+      </div>
+      <div class ='enter texting'>
+            <p>And view the result here.</p>
+            <div class ="box">
+            </div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

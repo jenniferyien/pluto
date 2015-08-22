@@ -1,0 +1,47 @@
+body {
+  max-width: 100%;
+}
+header {
+  text-align: center;
+}
+
+table{
+  border: 1px solid black;
+  margin: 0 37%;
+}
+td {
+  border: 1px dashed gray;
+  text-align: center;
+  padding: 1%
+  width: 100%
+}
+.enter {
+  float: left;
+  /*padding: 10%;*/
+  width: 50%;
+  text-align: center;
+}
+.texting {
+  padding: 1% 0;
+  text-align: left;
+}
+
+textarea {
+  width: 80%;
+  background-color: #F4f4f4;
+  padding: 1%;
+  font-size: 14px;
+}
+.box {
+  border: 1px solid black;
+  width: 80%;
+  min-height: 150px;
+  height: 100%;
+  background-color: #FFFDE9;
+  word-wrap: break-word;
+  padding: 1%;
+
+}
+p {
+  font-weight: bold;
+}
