@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title> Spin Out! </title>
+  <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.js"></script>
+  <script>
+  $(function(){
+    setInterval(function(){
+      var shiftX = Math.random()* 50 - 20;
+      var shiftY = Math.random()* 50 - 20;
+      $('#left-pupil, #right-pupil').velocity({translateX: shiftX, translateY: shiftY}, 100)
+                    .velocity({r:30}, 2000);
+                    $('#monkey').velocity({rotateZ: 5}, 1000);
+                    $('#monkey').velocity({rotateZ: -5}, 1000);
+                    $('#monkey').velocity({scaleX: 0.5, scaleY: 0.5}, 1000);
+      
+    },500);
+  });
+  </script>
+</head>
+<body>
+  <svg width= "1000" height ="1000">
+    <!-- <rect x= '10' y= '10' width= "100" rx= "10" ry=" 10" height= "100" fill="#ff0000"/>
+    <rect x= '110' y= '10' width= "100" rx= "10" ry=" 10" height= "100" fill="#ff7f00"/>
+    <rect x= '210' y= '10' width= "100" rx= "10" ry=" 10" height= "100" fill="#ffff00"/>
+    <rect x= '310' y= '10' width= "100" rx= "10" ry=" 10" height= "100" fill="#00ff00"/>
+    <rect x= '410' y= '10' width= "100" rx= "10" ry=" 10" height= "100" fill="#00ffff"/>
+    <rect x= '510' y= '10' width= "100" rx= "10" ry=" 10" height= "100" fill="#0000ff"/>
+    <rect x= '610' y= '10' width= "100" rx= "10" ry=" 10" height= "100" fill="#8b00ff"/>
+    <circle cx= "250" cy="250" r="100" fill="#ff0000"/>
+    <circle cx= "250" cy="250" r="90" fill="#ff7f00"/>
+    <circle cx= "250" cy="250" r="80" fill="#ffff00"/>
+    <circle cx= "250" cy="250" r="70" fill="#00ff00"/>
+    <circle cx= "250" cy="250" r="60" fill="#00ffff"/>
+    <circle cx= "250" cy="250" r="50" fill="#0000ff"/>
+    <circle cx= "250" cy="250" r="40" fill="#8b00ff"/>
+    <circle cx= "250" cy="250" r="30" fill="#000000"/>
+    <circle cx= "250" cy="250" r="20" fill="#ffffff"/>
+    <circle cx= "250" cy="250" r="10" fill="none" stroke="#000000"/>
+    <ellipse cx="700" cy="250" rx="300" ry="100" fill="#ff0000"/>
+    <ellipse cx="700" cy="250" rx="275" ry="90" fill="#ff7f00"/>
+    <ellipse cx="700" cy="250" rx="250" ry="80" fill="#ffff00"/>
+    <ellipse cx="700" cy="250" rx="225" ry="70" fill="#00ff00"/>
+    <ellipse cx="700" cy="250" rx="200" ry="60" fill="#00ffff"/>
+    <ellipse cx="700" cy="250" rx="175" ry="50" fill="#0000ff"/>
+    <ellipse cx="700" cy="250" rx="150" ry="40" fill="#8b00ff"/> -->
+    <g id ="monkey">
+              <circle cx= "225" cy= "250" r="80" fill= "#f1d7a4" />
+              <circle cx= "625" cy= "250" r="80" fill= "#f1d7a4" />
+              <circle cx= "425" cy= "250" r="200" fill= "#773410"/>
+              <circle cx= "350" cy= "250" r="65" fill= "#ffffff" stroke="#000000" stroke-width="10"/>
+              <circle id ="left-pupil" cx= "350" cy= "250" r="10" fill= "#000000" stroke="#000000"/>
+              <circle cx= "500" cy= "250" r="65" fill= "#ffffff" stroke="#000000" stroke-width="5"/>
+              <circle id ="right-pupil" cx= "500" cy= "250" r="10" fill= "#000000" stroke="#000000"/>
+              <ellipse cx= "425" cy= "375" rx="200" ry="90" fill= "#f1d7a4" />
+              <rect x="275" y="375" width="100" height="5" fill="#d5aa74" />
+    </g>
+  </svg>
+</body>
+</html>
