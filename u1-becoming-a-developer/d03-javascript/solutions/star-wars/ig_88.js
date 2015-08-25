@@ -24,8 +24,7 @@ var findHanSolo = function() {
       zap20Times();
       // making the looping condition false so you can exit the loop
 			loop = false;
-		}
-		else if(answerLowerCase !== 'han solo'){
+		} else if(answerLowerCase !== 'han solo'){
 			window.alert('You must die! (zap zap kaboom)!');
 		} else {
 			window.alert('You are mine Han Solo!');
@@ -84,3 +83,5 @@ var escapes = function(){
 		return false;
 	}
 } // escape function ends!
+
+findHanSolo();
