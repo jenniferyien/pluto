@@ -42,12 +42,37 @@ jQuery(function() {
     // Since inputs only have values we use .val("")
     inputTask.val("");
 
+    // ** USING EVENT DELEGATION INSTEAD (see below)** //
     // While we have access to the checkbox let's also add an event listener
     // that listens for the click event. When a click occurs on a checkbox
     // toggleClass did-it to apply a strike through style to the completed task
-    checkbox.on('click', function() {
-      newTask.toggleClass("did-it");
-    });
+    // checkbox.on('click', function() {
+    //   newTask.toggleClass("did-it");
+    // });
+  });
+
+  // ** Add Event Delegation to <ul> ** //
+  $('#task-list').on('click', 'input[type="checkbox"]', function(event) {
+
+    // ** Method #1 for getting <li> ** //
+    // The 'this' is referencing the current element being clicked.
+    // For this case it is the <input type='checkbox'>
+    // var taskItem = $(this).parent('li');
+
+    // ** Method #2 for getting <li> ** //
+    // This way is safer because 'this' is dependent on the current
+    // scope, which changes as it is bubbling up.
+
+    // The 'event.currentTarget' will not change event if it is bubbled
+    // up to its parent
+    var taskItem = $(event.currentTarget).parent('li');
+
+
+    // Don't need it to bubble up any further, so we stop it
+    event.stopPropagation();
+
+    // Toggle did-it class to the <li>
+    taskItem.toggleClass("did-it");
   });
 
   // Add an event listener for the keydown event on the <input type="text" id="task">
@@ -65,6 +90,4 @@ jQuery(function() {
       addTaskButton.click();
     }
   });
-
-
 });

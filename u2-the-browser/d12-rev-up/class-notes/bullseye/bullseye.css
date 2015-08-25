@@ -1,4 +1,4 @@
-#d1 {
+#t1 {
   background-color:green;
   position:relative;
   width:150px;
@@ -7,7 +7,7 @@
   cursor:pointer;
 }
 
-#d2 {
+#t2 {
   background-color:blue;
   position:absolute;
   top:25px;
@@ -16,7 +16,7 @@
   height:100px;
 }
 
-#d3 {
+#t3 {
   background-color:red;
   position:absolute;
   top:25px;

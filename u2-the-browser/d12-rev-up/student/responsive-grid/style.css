@@ -5,10 +5,18 @@ body {
   background-color: #FFFFFF;
   padding: 0;
   margin: 0;
+<<<<<<< HEAD
   font-family: "Average";
 }
 h1 {
   font-family: 'Fjalla One';
+=======
+  font-family: 'Average', 'Times New Roman', 'Times', sans-serif;
+}
+
+h1 {
+  font-family: 'Fjalla One', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+>>>>>>> c7a0b5d1d37c2afe2f258e4bccaea28864db6baf
 }
 
 img {
@@ -46,11 +54,22 @@ p:first-letter {
   font-size: 3em;
   float: left;
   line-height: 0.75em;
+<<<<<<< HEAD
 }
 
 @media only screen and (max-width: 767px){
   div.column{
     float:none;
+=======
+  /*font-family: 'Fjalla One', sans-serif;*/
+  border: solid black 1px;
+  margin-right: 0.1em;
+}
+
+@media only screen and (max-width: 767px) {
+  div.column {
+    float: none;
+>>>>>>> c7a0b5d1d37c2afe2f258e4bccaea28864db6baf
     width: 100%;
   }
   img {
@@ -58,9 +77,16 @@ p:first-letter {
   }
 }
 
+<<<<<<< HEAD
 @media print{
   div.column{
     /*float:left;*/
     width: 47%;
+=======
+
+@media print {
+  div.column {
+    width: 48%;
+>>>>>>> c7a0b5d1d37c2afe2f258e4bccaea28864db6baf
   }
 }
