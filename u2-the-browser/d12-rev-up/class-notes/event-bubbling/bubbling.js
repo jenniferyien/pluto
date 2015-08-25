@@ -1,23 +1,15 @@
 $(function() {
-  $('body').click(function(event) {
-    alert('Bubbled up to <body>');
+  $('#level3').on('click', function(event){
+      alert('clicked on ' + $(event.currentTarget).attr('id'));
   });
-
-  $('div#level1').click(function(event) {
-    alert('Bubbled on level1')
+  $('#level2').on('click', function(event){
+    event.stopPropagation();
+      alert('clicked on ' + $(event.currentTarget).attr('id'));
   });
-
-  $('p#level2').click(function(event) {
-    alert('Bubbled on level2')
+  $('#level1').on('click', function(event){
+      alert('clicked on ' + $(event.currentTarget).attr('id'));
   });
-
-  $('span#level3').click(function(event) {
-    highlight(event.currentTarget);
+  $('body').on('click', function(event){
+      alert('clicked on <body>');
   });
-
-  var highlight = function(element) {
-    $(element).css('background-color', 'yellow');
-    alert($(element).attr('id'));
-    $(element).css('background-color', '');
-  }
 });

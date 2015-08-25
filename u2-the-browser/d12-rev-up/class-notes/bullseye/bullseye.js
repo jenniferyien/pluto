@@ -10,9 +10,28 @@
 $(function() {
   // Leave this event listener to ensure that when you hit ring #1 it does not\
   // buble up to the body
+  var highlight = function(element){
+    $(element).css('background-color','yellow');
+    alert('You hit ' + $(event.currentTarget).attr('id'));
+    $(element).css('background-color','');
+
+  }
+
+
   $('body').click(function() {
-    alert('You hit <body>');
+    highlight(event.currentTarget);
   });
 
   // Fire your code away
+  $('#d3').click(function(event){
+    highlight(event.currentTarget);
+  });
+  $('#d2').click(function(event){
+    highlight(event.currentTarget);
+  })
+  $('#d1').click(function(event){
+    highlight(event.currentTarget);
+  })
+
+
 });
