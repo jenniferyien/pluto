@@ -1,7 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Average);
+
 body {
   background-color: #FFFFFF;
   padding: 0;
   margin: 0;
+  font-family: "Average";
+}
+h1 {
+  font-family: 'Fjalla One';
 }
 
 img {
@@ -33,4 +40,27 @@ div.column {
   margin-left: 1%;
   padding-right: 1%;
   float: left;
+}
+
+p:first-letter {
+  font-size: 3em;
+  float: left;
+  line-height: 0.75em;
+}
+
+@media only screen and (max-width: 767px){
+  div.column{
+    float:none;
+    width: 100%;
+  }
+  img {
+    display: none;
+  }
+}
+
+@media print{
+  div.column{
+    /*float:left;*/
+    width: 47%;
+  }
 }
