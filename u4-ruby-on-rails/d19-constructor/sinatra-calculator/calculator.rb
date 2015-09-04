@@ -11,27 +11,27 @@ class Calculator
 	end
 
 	def subtract
-		'Difference: '+ (@num_1.to_f - @num_2.to_f).to_s
+		"The difference for #{@num_1} - #{@num_2} = "+ (@num_1.to_f - @num_2.to_f).to_s
 	end
 
 	def multiply
-		'Product: '+ (@num_1.to_f * @num_2.to_f).to_s
+		"The product for #{@num_1} * #{@num_2} = "+ (@num_1.to_f * @num_2.to_f).to_s
 	end
 
 	def divide
-		'Quotient: '+ (@num_1.to_f / @num_2.to_f).to_s
+		"The quotient for #{@num_1} / #{@num_2} = "+ (@num_1.to_f / @num_2.to_f).to_s
 	end
 
 	def power
-		'Power: '+ (@num_1.to_f ** @num_2.to_f).to_s
+		"#{@num_1} to the #{@num_2} power = "+ (@num_1.to_f ** @num_2.to_f).to_s
 	end
 
 	def squareRoot
-		'squareRoot: '+ Math.sqrt(@num_1.to_f).to_s
+		"The square root for #{@num_1} = "+ Math.sqrt(@num_1.to_f).to_s
 	end
 
 	def cubeRoot
-		'cubeRoot: '+ Math.cbrt(@num_1.to_f).to_s
+		"The cube root for #{@num_1} = "+ Math.cbrt(@num_1.to_f).to_s
 	end
 
 end
