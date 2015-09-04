@@ -20,7 +20,7 @@ Examples:
 
 ## Setup
 
-Work in the `w05/d02/student` directory. Make a `homework` directory in which you put all other files. Remember you'll need a `Gemfile` and `config.ru`. `bundle init` will create the `Gemfile`, `bundle install` will lock it, and `bundle exec rackup` will start the server. Remember that you will need to restart the server each time you change your files. Remember to appropriately `require` sinatra and pry, and `require_relative` your `app.rb` file.
+Work in the `u4-ruby-on-rails/d19-constructors/student` directory. I made you  `sinatra-calculator` directory to do *ALL* of your work in. I set up most of the project's structure so work inside of the fiels that have been given to you.
 
 ## Completion
 
