@@ -16,8 +16,51 @@ module SinatraCalculator
     end
 
     get '/calc' do
-      "<h1>Hi there, welcome to the Sinatra Calculator, for all your calculating needs.<h1>"
+      File.read('calc.html')
     end
+
+    #adding two numbers
+    get '/calc/add/:num1/:num2' do |num1, num2|
+      calc = Calculator.new(num1,num2)
+      calc.add
+    end
+
+    #subtracting two numbers
+    get '/calc/subtract/:num1/:num2' do |num1, num2|
+      calc = Calculator.new(num1,num2)
+      calc.subtract
+    end
+
+    #multiplying two numbers
+    get '/calc/multiply/:num1/:num2' do |num1, num2|
+      calc = Calculator.new(num1,num2)
+      calc.multiply
+    end
+
+    #dividing two numbers
+    get '/calc/divide/:num1/:num2' do |num1, num2|
+      calc = Calculator.new(num1,num2)
+      calc.divide
+    end
+
+    #Exponent a number
+    get '/calc/power/:num1/:num2' do |num1, num2|
+      calc = Calculator.new(num1,num2)
+      calc.power
+    end
+
+    #square rooting a number
+    get '/calc/squareRoot/:num1' do |num1|
+      calc = Calculator.new(num1,{})
+      calc.squareRoot
+    end
+
+    #cube rooting a number
+    get '/calc/cubeRoot/:num1' do |num1|
+      calc = Calculator.new(num1,{})
+      calc.cubeRoot
+    end
+
 
   end #end class
 end #end module
