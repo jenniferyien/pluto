@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <link rel='stylesheet' type='text/css' href='/style.css' />
+</head>
+<body style='background-color: <%= @colors.sample %>'>
+  <h1>Compliments</h1>
+  <div id='compliment'>
+    <p><%= "#{@name} #{@compliments.sample}" %></p>
+  </div>
+  <ul id='try'>
+    <a href = '/'><li class='box'>I'm still emotionally vacant. Give me another compliment.</li></a>
+    <a href='http://ruby-doc.org/'><li class='box'> I am ready to soldier on. Bring on the Ruby! </li></a>
+  </ul>
+</body>
+</html>
