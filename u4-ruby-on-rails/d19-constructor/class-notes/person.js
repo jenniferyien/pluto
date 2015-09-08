@@ -7,6 +7,7 @@ var Person = function(options) {
   this.age = options['age'];
 }
 */
+// No Keyword Arguments in JavaScript
 
 var Person = function(firstName, lastName, age) {
   this.firstName = firstName;

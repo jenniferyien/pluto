@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Welcome to Flacebook!</h1>
+  <ul>
+    <% @result.each do |person| %>
+      <li><%= person["first_name"] %></li>
+    <% end %>
+  </ul>
+</body>
