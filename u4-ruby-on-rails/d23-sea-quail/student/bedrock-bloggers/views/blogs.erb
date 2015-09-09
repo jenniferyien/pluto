@@ -1,0 +1,24 @@
+<div class="container">
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Blogger</th>
+        <th>Title</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @blogs.each do |blog| %>
+        <tr>
+          <td>
+            <a class="blogger-avatar" href="/bloggers/<%= blog.blogger.id %>/<%= blog.blogger.to_param %>">
+              <img src="/images/<%= blog.blogger.to_param %>.sm.png" />
+            </a>
+          </td>
+          <td><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></td>
+          <td><%= blog.content[0..150] %>...</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

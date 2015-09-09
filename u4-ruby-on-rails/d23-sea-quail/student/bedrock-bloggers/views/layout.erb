@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title><%= page_title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" href="/bedrock.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><a href="/">Bedrock Bloggers</a></h1>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <div class="container">
+        <nav>
+          <a href="/" class="button">Home</a>
+          <a href="/blogs" class="button">Blogs</a>
+          <!-- <a href="/comments" class="button">Comments</a> -->
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

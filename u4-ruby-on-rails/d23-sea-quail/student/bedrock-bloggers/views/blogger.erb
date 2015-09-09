@@ -1,0 +1,19 @@
+<div class="container" id="bloggers_show" class="bloggers">
+  <div class="row">
+    <div class="four columns">
+      <div class="blogger-image">
+        <img src="/images/<%= @blogger.to_param %>.png" />
+      </div>
+      <blockquote><%= @blogger.slogan %></blockquote>
+    </div>
+    <div class="eight columns">
+      <h2><%= @blogger.name %></h2>
+      <% @blogger.blogs.each do |blog| %>
+        <article class="blog">
+          <div class="title"><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></div>
+          <div class="content"><%= blog.content.truncate(120) %></div>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</div>

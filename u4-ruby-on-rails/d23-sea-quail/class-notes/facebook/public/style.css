@@ -1,0 +1,33 @@
+body {
+}
+
+nav {
+  height: 60px;
+  background-color: #3a5795;
+}
+
+nav #brand {
+  float: left;
+  margin-left: 30px;
+}
+
+nav #brand a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+nav #links {
+  float: right;
+  margin-right: 200px;
+}
+nav #links li{
+  display: inline-block;
+}
+
+nav #links li a {
+ color: #ffffff;
+ display: block;
+ width: 60px;
+ text-decoration: none;
+}
