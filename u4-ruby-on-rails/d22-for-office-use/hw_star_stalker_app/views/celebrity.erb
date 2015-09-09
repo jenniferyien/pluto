@@ -1,0 +1,15 @@
+<div class='container'>
+    <h2> List of celebrities </h2>
+    <ul id='list'>
+      <% @celebrity.each do |name| %>
+        <li><a href='/stars/<%= name['id'] %>'><%= name['name'] %></a></li>
+      <% end %>
+    </ul>
+    <ul id='power'>
+        <% @person.each do |name| %>
+        <h2><%= name['name'] %></h2>
+        <li><%= "Birthday #{name['born_on']} "%></li>
+        <li><img src='<%= name['image_url']%>'/></li>
+        <% end %>
+    </ul>
+</div>

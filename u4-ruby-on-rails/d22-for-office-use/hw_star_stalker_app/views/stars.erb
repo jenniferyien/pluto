@@ -1,0 +1,8 @@
+<div class='container'>
+    <h2> List of celebrities </h2>
+    <ul id='list'>
+      <% @celebrity.each do |name| %>
+        <li><a href='/stars/<%= name['id'] %>'><%= name['name'] %></a></li>
+      <% end %>
+    </ul>
+</div>
