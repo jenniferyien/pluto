@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Flintstone";
+  src: url("/fonts/flintstone.eot?") format("eot"), url("/fonts/flintstone.woff") format("woff"), url("/fonts/flintstone.ttf") format("truetype"), url("/fonts/flintstone.svg#Flintstone") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  color: #000000;
+  margin-bottom: 125px; }
+
+h1, h2, h3 {
+  font-family: 'Flintstone', 'Times New Roman', 'Times', serif;
+  letter-spacing: 0.05em; }
+  h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover {
+    text-decoration: none;
+    color: #000000; }
+
+img {
+  max-width: 100%; }
+
+blockquote {
+  position: relative;
+  border-bottom: dotted black 2px;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0 1em 1em 0; }
+  blockquote:before, blockquote:after {
+    position: absolute;
+    font-size: 2em; }
+  blockquote:before {
+    content: '\201C';
+    left: -0.5em;
+    top: 0; }
+  blockquote:after {
+    content: '\201D';
+    right: -0.5em;
+    bottom: 0; }
+
+.text-center {
+  text-align: center; }
+
+.notice {
+  background-color: #FAE8A3;
+  padding: 0.5em 1em;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 1em;
+  font-weight: bold; }
+
+header {
+  background-color: #FFAE30;
+  padding-top: 1em;
+  margin-bottom: 1em; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 0;
+  background-color: #00AEDC;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.25);
+  text-align: center; }
+  footer .button {
+    color: white;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.25); }
+    footer .button:hover {
+      border-color: white;
+      background-color: #FFAE30; }
+
+.blogger-avatar {
+  display: block;
+  overflow: auto;
+  line-height: 75px; }
+  .blogger-avatar img {
+    float: left;
+    border: solid #FFAE30 3px;
+    border-radius: 100%;
+    width: 75px;
+    margin-right: 1em; }
+
+#bloggers_show .blogger-image {
+  text-align: center;
+  padding: 2em; }
+  #bloggers_show .blogger-image img {
+    max-width: 220px; }
+#bloggers_show .blog {
+  margin-bottom: 1em; }
+  #bloggers_show .blog .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.25em; }
