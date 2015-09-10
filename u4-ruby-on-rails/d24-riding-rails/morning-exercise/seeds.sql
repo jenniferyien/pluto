@@ -13,5 +13,5 @@ CREATE TABLE players(
 
 COPY players
   (name, age, team, games, points)
-FROM '/nba_season_2011-12.csv'
+FROM '/Users/Jenn/code/wdi/pluto/u4-ruby-on-rails/d24-riding-rails/morning-exercise/nba_season_2011-12.csv'
     DELIMITER ',' CSV;
