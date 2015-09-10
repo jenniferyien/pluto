@@ -39,7 +39,8 @@ class Blogger
   end
 
   def blogs
-    []
+    blog = $db.exec_params('SELECT * FROM blogs WHERE blogger_id = $1',[id])
+    blog.map {|attr| Blog.new(attr)}
   end
 
 end

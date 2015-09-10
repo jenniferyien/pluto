@@ -1,6 +1,7 @@
 require 'sinatra'
 require './models/blogger'
 require './models/blog'
+require 'active_support/all'
 
 class BedrockBloggers < Sinatra::Base
 

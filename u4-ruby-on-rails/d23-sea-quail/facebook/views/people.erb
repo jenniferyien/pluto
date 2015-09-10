@@ -1,0 +1,6 @@
+<h1>Welcome to Flacebook!</h1>
+<ul>
+  <% @people.each do |person| %>
+    <li><%= "#{person['first_name'].capitalize} #{person['last_name'].capitalize}'s birthday is #{person['birthday']}" %></li>
+  <% end %>
+</ul>
