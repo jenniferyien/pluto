@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BananaStand</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+  <h1>Brand Guidelines</h1>
+  <ul>
+    <li><a href='/style_typo'>Typography</a></li>
+    <li><a href='/style_form'>Forms</a></li>
+    <li><a href='/style_button'>Buttons</a></li>
+  </ul>
+</nav>
+<%= yield %>
+
+</body>
+</html>

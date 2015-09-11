@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<a href="#" class="button">Default Button</a>
+<a href="#" class="button success">Success Button</a>
+<a href="#" class="button secondary">Secondary Button</a>
+<a href="#" class="button alert">Alert Button</a>
+<a href="#" class="button info">Info Button</a>
+<a href="#" class="button disabled">Disabled Button</a>
+
+
+<h1><%= @user.name %></h1>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @user.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @user.zip %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @user.birth %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

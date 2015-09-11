@@ -1,0 +1,16 @@
+<h1>Listing of Bloggers</h1>
+<<<<<<< HEAD
+<ul>
+  <% @bloggers.each do |blogger| %>
+  <!-- <li><a href='/bloggers/<%= blogger.id %>'><%= blogger.name %></a></li> -->
+<li><%= link_to blogger.name, blogger %></li>
+<% end %>
+</ul>
+=======
+
+<% @bloggers.each do |blogger| %>
+	<p>
+		<%= link_to blogger.name, blogger %>
+	</p>
+<% end %>
+>>>>>>> 56cf2f5bb562c006994b5768923b86f3e11c2362
