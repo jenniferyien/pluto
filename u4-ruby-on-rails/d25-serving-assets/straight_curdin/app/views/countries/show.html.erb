@@ -1,0 +1,10 @@
+<div class ='container'>
+    <h3>Cheese in <%= @country.name %></h3>
+    <ul>
+      <% @cheese.each do |chee| %>
+          <% if chee.country_id == @country.id %>
+          <li><a href='/cheeses/<%= chee.id %>'><%= chee.name %></a></li>
+          <% end %>
+      <% end %>
+    </ul>
+</div>

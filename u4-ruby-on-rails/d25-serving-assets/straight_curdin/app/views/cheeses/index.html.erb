@@ -1,0 +1,8 @@
+<div class ='container'>
+  <h3>List of Cheeses, wanna eat it?</h2>
+  <ul>
+    <% @cheeses.each do |cheese| %>
+    <li><%= link_to cheese.name, cheese %> <a href='/cheeses/<%= cheese.id %>/eat' class="button tiny round">Eat?</a></li>
+    <% end %>
+  </ul>
+</div>

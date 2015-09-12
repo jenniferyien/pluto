@@ -1,0 +1,8 @@
+<div class= 'container'>
+  <h3>List of Countries</h3>
+  <ul>
+    <% @countries.each do |country| %>
+    <li><a href='/countries/cheeses/<%= country.id %>'><%= country.name %></a></li>
+    <% end %>
+  </ul>
+</div>

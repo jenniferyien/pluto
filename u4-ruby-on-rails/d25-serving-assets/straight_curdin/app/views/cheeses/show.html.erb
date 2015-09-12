@@ -1,0 +1,15 @@
+<div class='container'>
+    <h2> <%= @chee.name %> <a href='/cheeses/<%= @chee.id %>/edit'><small><small>edit</small></small></a></h2>
+    <ul class ='left info'>
+      <% @country.each do |countri| %>
+          <% if countri.id == @chee.country_id %>
+              <li> <strong><a href= '/countries'>Country:</a></strong> <a href='/countries/cheeses/<%= countri.id %>'><%= countri.name %></a></li>
+          <% end %>
+      <% end %>
+      <li> <strong>Milk Type:</strong> <%= @chee.milk_type.capitalize %></li>
+      <li> <strong>Stank Level:</strong> <%= @chee.stank_level %></li>
+      <li> <strong>Description:</strong> </li>
+      <blockquote> <%= @chee.description.capitalize %></blockquote>
+    </ul>
+    <div class='info'><img src='<%= @chee.image_url %>'/></div>
+</div>

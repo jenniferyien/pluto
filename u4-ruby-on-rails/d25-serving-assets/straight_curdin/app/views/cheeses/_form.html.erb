@@ -1,0 +1,36 @@
+<div class ='container'>
+    <%= form_for(@cheese) do |f| %>
+
+      <div class="large-12 columns">
+        <label class='left'><%= f.label :name %></label><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="large-6 columns">
+          <label class='left'><%= f.label :country %></label><br>
+          <%= f.select(:country_id) do %>
+          <% Country.all.each do |c| -%>
+          <%= content_tag(:option, c.name, value: c.id) %>
+          <% end %>
+          <% end %>
+        </div>
+        <div class="large-6 columns">
+          <label class='left'><%= f.label :milk_type %></label><br>
+          <%= f.text_field :milk_type %>
+        </div>
+        <div class="large-12 columns">
+          <label class='left'><%= f.label :description %></label><br>
+          <%= f.text_area :description %>
+        </div>
+        <div class="small-9 columns">
+          <label class='left'><%= f.label :image_url %></label><br>
+          <%= f.url_field :image_url %>
+        </div>
+        <div class="small-3 columns">
+          <label class='left'><%= f.label :stank_level %></label><br>
+          <%= f.number_field :stank_level %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+    <% end %>
+</div>
