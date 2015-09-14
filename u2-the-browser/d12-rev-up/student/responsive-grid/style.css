@@ -1,22 +1,32 @@
+<<<<<<< HEAD
+=======
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 @import url(http://fonts.googleapis.com/css?family=Average);
 
+>>>>>>> 989fd70e0a86a616a7b444a99e86ce917fcf5cc8
 body {
   background-color: #FFFFFF;
   padding: 0;
   margin: 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
   font-family: "Average";
 }
 h1 {
   font-family: 'Fjalla One';
 =======
+>>>>>>> d5aa9b52adb29990afc14591a06d952a182033b7
+=======
   font-family: 'Average', 'Times New Roman', 'Times', sans-serif;
 }
 
 h1 {
   font-family: 'Fjalla One', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+<<<<<<< HEAD
 >>>>>>> c7a0b5d1d37c2afe2f258e4bccaea28864db6baf
+=======
+>>>>>>> 989fd70e0a86a616a7b444a99e86ce917fcf5cc8
+>>>>>>> d5aa9b52adb29990afc14591a06d952a182033b7
 }
 
 img {
@@ -49,6 +59,8 @@ div.column {
   padding-right: 1%;
   float: left;
 }
+<<<<<<< HEAD
+=======
 
 p:first-letter {
   font-size: 3em;
@@ -90,3 +102,4 @@ p:first-letter {
 >>>>>>> c7a0b5d1d37c2afe2f258e4bccaea28864db6baf
   }
 }
+>>>>>>> 989fd70e0a86a616a7b444a99e86ce917fcf5cc8

@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html, body { height: 100%; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 2em;
+  background-color: #EEEEEE;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+  > * { display: block; margin-left: 16pt; margin-right: 16pt; }
+}
+
+form input {
+  font-size: inherit;
+  padding: 2pt;
+}
+
+form label {
+  display: inline-block;
+  width: 100pt;
+}
+
+form .field {
+  line-height: 24pt;
+}
+
+form .actions {
+  margin-left: 103pt;
+}

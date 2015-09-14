@@ -3,12 +3,21 @@
 | Tic-Tac-Toe       | Point of Sales    | Black Jack       |
 |-------------------|-------------------|------------------|
 | Zoe Sachs         | Andres Carter     | Mohamed Elgendy  |
+<<<<<<< HEAD
+| Esther Zinn       | Josh Bubis        | Jennifer Yien    |
+| Brian Deutsch     | Yuka Nagai        | Joy Morgan       |
+| Harrison Riddell  | Meiji Chen        | Steph Nathai     |
+| Pamela Nevins     | Pierre Cajuste    | Eric Kim         |
+| Matt Morrisey     | Calvin Yeung      | Salvatore Fanara |
+| Christopher Smith | Raquel Hosein     | Nick Marshall    |
+=======
 | Esther Zinn       | Nick Marshall     | Jennifer Yien    |
 | Brian Deutsch     | Yuka Nagai        | Matt Morrisey    |
 | Harrison Riddell  | Meiji Chen        | Steph Nathai     |
 | Pamela Nevins     | Pierre Cajuste    | Eric Kim         |
 | Joy Morgan        | Calvin Yeung      | Salvatore Fanara |
 | Christopher Smith | Raquel Hosein     | Josh Bubis       |
+>>>>>>> 989fd70e0a86a616a7b444a99e86ce917fcf5cc8
 | Jacob Shemkovitz  | Jaskaranjit Singh | Edward Petner    |
 | Victoria Donnelly |
 
@@ -77,9 +86,16 @@ Build a web version of the is the most widely played casino banking game in the 
 
 #### Necessary for MVP
 
+<<<<<<< HEAD
+- The game should generate two random cards per player, and display one of them.
+- The game should ask the player, "Hit" or "Stand"
+- The game should generate another card for the players hand if a player chooses to "Hit"
+- The game should generate random cards for the dealer until the cards total 17 or more points
+=======
 - The game should follow the rules for Black Jack
 - The game should deal cards for the dealer until the cards total 17 or more points.
 - The game should properly handle an Ace as 11 or 1.
+>>>>>>> 989fd70e0a86a616a7b444a99e86ce917fcf5cc8
 - The game should add up the values in the players hand and check for a "bust" (value greater than 21)
 - The game should look presentable
 

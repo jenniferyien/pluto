@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Average);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+body {
+  background-color: #FFFFFF;
+  padding: 0;
+  margin: 0;
+  font-family: 'Average', serif;
+}
+
+h1 {
+  margin: 0.5em 2%;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+p:first-letter {
+  float: left;
+  font-size: 3em;
+  line-height: 0.75em;
+  margin-right: 0.1em;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+div.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+div.column {
+  width: 31%;
+  margin-left: 1%;
+  padding-right: 1%;
+  float: left;
+  text-align: justify;
+}
+
+@media(max-width: 767px) {
+  div.column {
+    float: none;
+    width: 100%;
+    border: none;
+  }
+  h1 {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+}

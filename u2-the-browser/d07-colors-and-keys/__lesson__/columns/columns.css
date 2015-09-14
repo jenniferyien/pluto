@@ -1,0 +1,17 @@
+h1 { text-align: center; }
+
+.column {
+  width: 29%;
+  margin-left: 2%;
+  padding-right: 2%;
+  border-right: solid black 1px;
+  float: left;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+.row {
+  clear: both;
+}

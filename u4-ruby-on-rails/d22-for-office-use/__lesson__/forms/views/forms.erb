@@ -1,0 +1,7 @@
+<div class="container">
+  <ul>
+    <% @forms.each do |form| %>
+      <li><%= form['name'] %> &lt;<%= form['email'] %>&gt;</li>
+    <% end %>
+  </ul>
+</div>

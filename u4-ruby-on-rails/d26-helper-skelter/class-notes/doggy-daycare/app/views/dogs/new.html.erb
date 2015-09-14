@@ -1,0 +1,29 @@
+<ul>
+  <% @dog.errors.each do |field, error| %>
+    <li><%= field.to_s.humanize %> <%= error %></li>
+  <% end %>
+</ul>
+<form action="/dogs" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <div class="field">
+    <label for="dog_name">Dog's Name:</label>
+    <input type="text" id="dog_name" name="dog[name]" value="<%= @dog.name %>">
+  </div>
+  <div class="field">
+    <label for="dog_age_months">Dog's Age:</label>
+    <input type="number" id="dog_age_months" name="dog[age_months]" min="0">
+  </div>
+  <div class="field">
+    <label for="dog_breed">Dog's Breed:</label>
+    <%= select_tag "dog[breed]", options_for_select(Dog::BREED), id: 'dog_breed' %>
+  </div>
+  <div class="field">
+    <label for="dog_color">Dog's Color:</label>
+    <input type="text" id="dog_color" name="dog[color]">
+  </div>
+  <div class="field">
+    <label for="dog_tagged">Tagged?:</label>
+    <input type="checkbox" id="dog_tagged" name="dog[tagged]">
+  </div>
+  <input type="submit">
+</form>

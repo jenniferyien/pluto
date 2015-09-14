@@ -34,8 +34,12 @@ $(function() {
   };
 
   $('body').click(function(event) {
+<<<<<<< HEAD
     event.stopPropagation();
 >>>>>>> c7a0b5d1d37c2afe2f258e4bccaea28864db6baf
+=======
+    // event.stopPropagation();
+>>>>>>> d5aa9b52adb29990afc14591a06d952a182033b7
     highlight(event.currentTarget);
   });
 
@@ -53,17 +57,17 @@ $(function() {
 
 =======
   $('#t3').click(function(event) {
-    event.stopPropagation();
+    // event.stopPropagation();
     highlight(event.currentTarget);
   });
 
   $('#t2').click(function(event) {
-    event.stopPropagation();
+    // event.stopPropagation();
     highlight(event.currentTarget);
   });
 
   $('#t1').click(function(event) {
-    event.stopPropagation();
+    // event.stopPropagation();
     highlight(event.currentTarget);
   });
 >>>>>>> c7a0b5d1d37c2afe2f258e4bccaea28864db6baf

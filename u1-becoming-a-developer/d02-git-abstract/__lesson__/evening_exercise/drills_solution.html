@@ -1,0 +1,68 @@
+<html>
+<head>
+</head>
+<body>
+
+  <h1>JavaScript Drills!</h1>
+  <script>
+
+  // YOUR SOLUTIONS START HERE!
+
+  // 1. Pythagorean Theorem
+
+    var a = a * a;
+    var b = b * b;
+    var c = a + b;
+
+  // 2. Array of Favorite things
+
+    var favoriteThings = ["Dachshunds", "Guacamole", "Flat Whites", "Design", "Coding"];
+
+  // 3. Over 21
+
+    var age = prompt("How old are you?");
+
+    if (age >= 21) {
+      alert("We want to sell you booze!");
+    } else {
+      alert("Sorry. We can't sell to minors!");
+    };
+
+  // 4. Problems...problems everywhere!
+
+    a > b;
+    c === d;
+    42 < 48;
+    "name" === "name";
+    e - f === g;
+    h * h === i;
+    j * h;
+
+  // 5. Adventure time!
+
+    // On a beautiful Saturday [noun] in New York City, I went to go meet my [noun] for brunch. I was [verb]ing down Broadway, when all of a sudden, I [verb]ed up and saw a [noun] climbing the [noun] State Building. What a weird morning!
+
+    var nouns = [];
+    var verbs = [];
+
+    var userInput = confirm("Do you want to build an adventure?");
+    if (userInput === true) {  
+      for (var i = 0; i < 4; i++) {
+        nouns[i] = prompt("Enter a noun");
+      };
+
+      for (var i = 0; i < 2; i++) {
+        verbs[i] = prompt("Enter a verb");
+      };
+      
+      var story = alert("On a beautiful Saturday " + nouns[0] + " in New York City, I went to go meet my " + nouns[1] + " for brunch. I was " + verbs[0] + "ing down Broadway, when all of a sudden, I " + verbs[1] + "ed up and saw a " + nouns[2] + " climbing the " + nouns[3] + " State Building. What a weird morning!");
+    } else {
+      alert("You're no fun! No adventure for you.");
+    };
+
+  // YOUR SOLUTIONS END HERE!
+
+  </script>
+
+</body>
+</html>

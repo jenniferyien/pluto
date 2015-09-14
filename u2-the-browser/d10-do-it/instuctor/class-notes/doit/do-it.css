@@ -1,0 +1,26 @@
+header {
+  background-image: url("http://cdn.papermag.com/uploaded_images/shia.jpg");
+  height: 90px;
+}
+
+h1 {
+  color: gray;
+  text-align: center;
+}
+
+main {
+  width: 80%;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  height: 100%;
+}
+
+#task-list {
+  font-size: 2em;
+  list-style-type: none;
+}
+
+.did-it {
+  text-decoration: line-through;
+  color: red;
+}

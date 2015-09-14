@@ -19,3 +19,8 @@
 | 27 T | Heroku Deployment   | Pan        | [Heroku Guide](https://devcenter.heroku.com/articles/rails4)   |
 |      | Integration Testing | Jaden      | [Capybara](http://jnicklas.github.io/capybara/)   |
 | 28-30 W | **Project 2** ||||
+
+### THINGS I MISSED
+- Migrations / Rake
+- Authentication / Sessions
+- SQL Injection / Security
