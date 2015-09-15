@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Born on:</strong>
+  <%= @author.born_on %>
+</p>
+
+<p>
+  <strong>Died on:</strong>
+  <%= @author.died_on %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @author.gender %>
+</p>
+
+<p>
+  <strong>Has pseudonym:</strong>
+  <%= @author.has_pseudonym %>
+</p>
+
+<p>
+  <strong>Book Collection:</strong>
+</p>
+ <ul>
+ <% @books.each do |book| %>
+ <li> <%= link_to book.title, book %></li>
+ <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @character.gender %>
+</p>
+
+<p>
+  <strong>Quirk:</strong>
+  <%= @character.quirk %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @character.book.title %>
+</p>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back', characters_path %>
