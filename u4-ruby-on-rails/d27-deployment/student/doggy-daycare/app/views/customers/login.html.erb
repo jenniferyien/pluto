@@ -1,0 +1,13 @@
+<h3>Please Log In</h3>
+<form action='/login' method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <div class='field'>
+      <label for='customers_email'> Email: </label>
+      <input type='text' id='customer_email' name='email'>
+  </div>
+  <div class='field'>
+      <label for='customers_pw'> Password: </label>
+      <input type='password' id='customer_pw' name='password'>
+  </div>
+  <input type='submit'>
+</form>
