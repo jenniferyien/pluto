@@ -1,0 +1,8 @@
+<ul>
+  <% @bbq_locations.each do |bbq_location| %>
+    <li>
+      <%= bbq_location.prop_id %> - <%= bbq_location.name %>
+      <blockquote><%= bbq_location.park.location %> &mdash; <%= bbq_location.location %></blockquote>
+    </li>
+  <% end %>
+</ul>

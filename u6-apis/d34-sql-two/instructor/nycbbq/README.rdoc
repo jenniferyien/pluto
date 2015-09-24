@@ -1,0 +1,3 @@
+STEP 2:
+
+CREATE A WEBPAGE TO VIEW ALL THE PARKS (controller/view/route)
