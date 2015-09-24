@@ -1,14 +1,7 @@
+<div class="page-header">
+  <h1><%= "#{@candidate.first_name} #{@candidate.last_name}" %> <small>Woot!</small></h1>
+</div>
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @candidate.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @candidate.last_name %>
-</p>
 
 <p>
   <strong>Bio:</strong>
@@ -23,7 +16,7 @@
 <p>
   <strong>Votes:</strong>
   <span class="votes"><%= @candidate.votes %></span>
-  <button data-id="<%= @candidate.id %>">Vote</button>
+  <button data-id="<%= @candidate.id %>" class="btn btn-primary">Vote</button>
 </p>
 
 <p>
