@@ -1,0 +1,10 @@
+<h1>NYC Parks </h1>
+<ul>
+<% @parks.each do |park| %>
+<li><%= park.name %> <%= park.location%></li>
+<% end %>
+</ul>
+<% if @page > 0 %>
+  <%= link_to 'Previous Page', parks_path(page: @page - 1) %>
+<% end %>
+<%= link_to 'Next Page', parks_path(page: @page + 1) %>
