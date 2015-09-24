@@ -5,17 +5,50 @@
   <title>Github Browser</title>
   <script src="jquery.js"></script>
   <script src="github_api.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' href="./style.css">
 </head>
 <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://github.com/">
+        <img alt="Brand" src="https://fleep.io/blog/wp-content/uploads/2014/07/github_icon.png">
+      </a>
+    </div>
+    <form class="search-form navbar-form navbar-right" role="search">
+       <div class="form-group">
+         <input  class="username-field form-control" type="text" name="username" placeholder="enter a valid username">
+       </div>
+       <input type="submit" class="btn btn-default" value="Search User">
+     </form>
 
-  <form class="search-form">
+  </div>
+</nav>
+  <!-- <form class="search-form">
     <label for="username">Username</label>
     <input  class="username-field" type="text" name="username" placeholder="enter a valid username">
     <input type="submit" value="Search for User">
-  </form>
-  <div class="user-info"></div>
+  </form> -->
 
   <!-- Search for Code -->
+  <div class="page-header">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 profile">
+
+      </div>
+      <div class="col-sm-6 col-md-4  repolink">
+
+      </div>
+      <div class="col-sm-6 col-md-4  gistlink">
+
+      </div>
+
+    </div>
+  </div>
+
 
 </body>
 </html>
