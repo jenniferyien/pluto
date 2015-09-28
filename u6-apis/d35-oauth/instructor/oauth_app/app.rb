@@ -2,8 +2,10 @@ module App
   class Server < Sinatra::Base
 
     # these are private, and we don't want them on github
-    CLIENT_ID = ENV['GITHUB_CLIENT_ID']
-    CLIENT_SECRET = ENV['GITHUB_CLIENT_SECRET']
+    CLIENT_ID       = ENV['GITHUB_CLIENT_ID']
+    CLIENT_SECRET   = ENV['GITHUB_CLIENT_SECRET']
+    FACEBOOK_ID     = ENV['FACEBOOK_OAUTH_ID']
+    FACEBOOK_SECRET = ENV['FACEBOOK_OAUTH_SECRET']
 
     enable :sessions
     set :session_secret, 'secret lovers'
@@ -14,6 +16,7 @@ module App
     end
 
     get '/' do
+      #builds github OAUTH URL
       base_url = "https://github.com/login/oauth/authorize"
       redirect_uri = "http://localhost:9292/oauth_callback"
       state = SecureRandom.urlsafe_base64 # a random unguessable string
@@ -22,7 +25,11 @@ module App
       query = "client_id=#{CLIENT_ID}&redirect_uri=#{redirect_uri}&state=#{state}"
 
       @auth_url = "#{base_url}/?#{query}"
-      # binding.pry
+
+      #builds facebook OAuth URL
+      fb_redirect_uri = "http://localhost:9292/facebook/oauth_callback"
+      @fb_url         = "https://www.facebook.com/dialog/oauth?client_id=#{FACEBOOK_ID}&redirect_uri=#{fb_redirect_uri}&state=#{state}"
+
       erb :index
     end
 
@@ -40,7 +47,7 @@ module App
               client_id: CLIENT_ID,
           client_secret: CLIENT_SECRET,
                    code: code,
-          redirect_uri: "http://localhost:9292/oauth_callback"
+           redirect_uri: "http://localhost:9292/oauth_callback"
         }
 
         headers = {
@@ -55,10 +62,35 @@ module App
 
       else
         "WE'VE BEEN TAMPERED WITH"
-      end
+      end # checking state
 
 
-    end#/oauth_callback
+    end#/github_oauth_callback
+
+    get '/facebook/oauth_callback' do
+      state = params[:state]
+      code  = params[:code]
+
+      if state == session[:auth_state] # if good, lets get the token
+        fb_auth_url = "https://graph.facebook.com/v2.3/oauth/access_token?"
+
+        data = {
+                  client_id:  FACEBOOK_ID,
+              client_secret:  FACEBOOK_SECRET,
+                       code:  code,
+               redirect_uri:  "http://localhost:9292/facebook/oauth_callback"
+               }
+
+        facebook_response = RestClient.post fb_auth_url, data
+
+        session[:access_token] = JSON.parse(facebook_response)["access_token"]
+
+        redirect '/facebook_logged_in'
+      else
+        "WE'VE BEEN INTERCEPTED BETWEEN US AND FACEBOOK"
+      end #checking state
+
+    end# fb_oauth_callback
 
     get '/logged_in' do
       # auth established, lets get shit from github
@@ -77,7 +109,24 @@ module App
 
       erb :logged_in
 
-    end
+    end # w/ GitHub
+
+
+    get '/facebook_logged_in' do
+
+      url = "https://graph.facebook.com/me"
+
+      data = {
+        Authorization: "Bearer #{session[:access_token]}"
+      }
+
+
+      facebook_user = RestClient.get url, data
+              @user = JSON.parse facebook_user
+      binding.pry
+
+      erb :facebook_logged_in
+    end # w/ Facebook
 
   end # Server
 end # App
