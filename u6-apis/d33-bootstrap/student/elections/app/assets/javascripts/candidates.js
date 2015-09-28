@@ -28,5 +28,28 @@ $(function() {
 		});
 	});
 
-	
+	$('input[name="commit"]').click(function(event){
+			event.preventDefault();
+			var candidateAttr = {
+				first_name: $('#candidate_first_name').val(),
+				last_name: $('#candidate_last_name').val(),
+				bio: $('#candidate_bio').val(),
+				party: $('#candidate_party').val(),
+				campaign: $('#candidate_campaign').val()
+			}
+			console.log("candidateAttr", candidateAttr);
+
+			$.ajax({
+				url:'/candidates',
+				method: 'POST',
+				data: {candidate: candidateAttr},
+				success: function(result, status, xhr){
+					console.log('result', result);
+				},
+				error: function(xhr, status, error){
+					console.log("Error", error);
+				}
+			});
+	});
+
 });
