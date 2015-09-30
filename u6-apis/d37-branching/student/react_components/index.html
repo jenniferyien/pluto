@@ -9,7 +9,56 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-      
+      var CommentBox = React.createClass({
+        render() {
+          return(
+            <div className='comment-box'>
+                <p>Hello, world! I am a CommentBox</p>
+                <CommentList/>
+                <CommentForm/>
+            </div>
+          )
+        }
+      })
+      var CommentList = React.createClass({
+        render(){
+          return(
+            <div className='comment-list'>
+              <p>Hello I am a CommentList </p>
+            </div>
+          )
+        }
+      })
+      var CommentForm = React.createClass({
+        render(){
+          return(
+            <div className='comment-form'>
+              <p> Hello I am a CommentForm </p>
+            </div>
+          )
+        }
+      })
+      React.render(
+        <CommentBox/>,
+        document.getElementById('example')
+      );
+      // React.render(
+      //   <div>
+      //   <h1>Hello, world!</h1>
+      //   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      //   <div id='somewhereelse'></div>
+      //   </div>,
+      //   document.getElementById('example')
+      // );
+      // React.render(
+      //   <div>
+      //   <h1>Hello, somewhere!</h1>
+      //   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      //   </div>,
+      //   document.getElementById('somewhereelse')
+      // );
+
+
     </script>
   </body>
 </html>

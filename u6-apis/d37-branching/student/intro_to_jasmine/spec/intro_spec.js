@@ -11,7 +11,7 @@ describe('sleepIn', function(){
   });
 
   it('returns false for Monday', function(){
-    pending("This spec won't run until we comment it out this line.");
+    // pending("This spec won't run until we comment it out this line.");
     expect( sleepIn('Monday') ).toBe(false);
   });
 
@@ -28,13 +28,13 @@ describe('pluralize', function(){
 
   it('turns an array into a comma separated string', function(){
     var list = ['lions', 'tigers', 'bears'];
-    pending("This won't run until we comment it out");
-    expect( pluralize(list) ).toEqual( "lions, tigers and bears" );
+    // pending("This won't run until we comment it out");
+    expect( pluralize(list) ).toEqual( "lions, tigers, and bears" );
   });
 
   it("works on any array of strings", function(){
     var snacks = ['doritos', 'apples', 'candy', 'cheetos'];
-    expect( pluralize(snacks) ).toEqual( "doritos, apples, candy and cheetos");
+    expect( pluralize(snacks) ).toEqual( "doritos, apples, candy, and cheetos");
   });
 
   it("turns single word arrays into itself", function(){
