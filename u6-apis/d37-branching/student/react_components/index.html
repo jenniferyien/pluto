@@ -8,7 +8,9 @@
   </head>
   <body>
     <div id="example"></div>
+    
     <script type="text/babel">
+<<<<<<< HEAD
       var CommentBox = React.createClass({
         render() {
           return(
@@ -38,10 +40,46 @@
           )
         }
       })
+=======
+
+      var CommentBox = React.createClass({
+        render() {
+          return (
+            <div id="container" className="comment-box">
+              Hello, world! I am a CommentBox
+              <CommentList/>
+              <CommentForm/>
+            </div>
+          );
+        }
+      });
+
+      var CommentList = React.createClass({
+        render() {
+          return (
+            <div className="comment-list">
+              Hello I am a CommentList
+            </div>
+          );
+        }
+      });
+
+      var CommentForm = React.createClass({
+        render() {
+          return (
+            <div className="comment-form">
+              Hello World I am a CommentForm
+            </div>
+          );
+        }
+      });
+
+>>>>>>> b55932891590415321a81871a7813f6dbe2bcdc8
       React.render(
         <CommentBox/>,
         document.getElementById('example')
       );
+<<<<<<< HEAD
       // React.render(
       //   <div>
       //   <h1>Hello, world!</h1>
@@ -59,6 +97,9 @@
       // );
 
 
+=======
+      
+>>>>>>> b55932891590415321a81871a7813f6dbe2bcdc8
     </script>
   </body>
 </html>
