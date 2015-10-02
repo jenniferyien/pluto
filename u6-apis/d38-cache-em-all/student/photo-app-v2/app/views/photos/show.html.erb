@@ -1,37 +1,42 @@
-<figure>
-  <% if @photo.processed? %>
-    <%= image_tag photo_path(format: ['default', @photo.format].join('.')) %>
-  <% else %>
-    <%= image_tag 'processing-photo.gif' %>
-  <% end %>
-</figure>
+<!-- <%# cache "photo-show-page-#{@photo.id}-#{@photo.updated_at}" do %> -->
+<% cache @photo do %>
+    <figure>
+      <% if @photo.processed? %>
+        <%= image_tag photo_path(format: ['default', @photo.format].join('.')) %>
+      <% else %>
+        <%= image_tag 'processing-photo.gif' %>
+      <% end %>
+    </figure>
 
-<div class="container">
-  <p>
-    <strong>Name:</strong>
-    <%= @photo.name %>
-  </p>
+    <div class="container">
+      <p>
+        <strong>Name:</strong>
+        <%= @photo.name %>
+      </p>
 
-  <p>
-    <strong>Format:</strong>
-    <%= @photo.format %>
-  </p>
+      <p>
+        <strong>Format:</strong>
+        <%= @photo.format %>
+      </p>
 
-  <p>
-    <strong>Width:</strong>
-    <%= @photo.width %>
-  </p>
+      <p>
+        <strong>Width:</strong>
+        <%= @photo.width %>
+      </p>
 
-  <p>
-    <strong>Height:</strong>
-    <%= @photo.height %>
-  </p>
+      <p>
+        <strong>Height:</strong>
+        <%= @photo.height %>
+      </p>
 
-  <p>
-    <strong>Aspect ratio:</strong>
-    <%= @photo.aspect_ratio %>
-  </p>
 
-  <%= link_to 'Edit', edit_photo_path(@photo) %> |
-  <%= link_to 'Back', photos_path %>
-</div>
+      <p>
+        <strong>Aspect ratio:</strong>
+        <%= @photo.aspect_ratio %>
+      </p>
+
+
+      <%= link_to 'Edit', edit_photo_path(@photo) %> |
+      <%= link_to 'Back', photos_path %>
+    </div>
+<% end %>

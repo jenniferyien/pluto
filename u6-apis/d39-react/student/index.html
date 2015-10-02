@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+  </head>
+  <body>
+    <script>
+
+    var TheForm = React.createClass({
+      render: function(){
+        return(
+          <div>
+            <nav className='navbar navbar-inverse'>
+              <h4 className="navbar-text">Artist Search</h4>
+              <form className="navbar-form navbar-right">
+                <div className="form-group">
+                  <input type='text' id='searchResult' placeholder='search' className='form-control' aria-describedby="sizing-addon3"/>
+                </div>
+                <button type="submit" id='theSubmit' className="btn btn-default">Submit</button>
+              </form>
+            </nav>
+            <div id='theList' className='container'></div>
+          </div>
+        )
+      }
+    });
+
+
+    React.render(<TheForm />, document.body);
+
+
+
+
+    </script>
+
+  </body>
+</html>
