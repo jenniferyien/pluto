@@ -1,0 +1,46 @@
+/*
+ *= require_self
+ *= require_tree .
+ */
+
+@import 'palette';
+@import 'fonts';
+
+html, body { min-height: 100%; }
+
+body {
+  background-color: $color2;
+  color: mix($color2,$color3);
+  font-family: $font1;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+table {
+  background-color: #EEEEEE;
+}
+
+.button {
+  border-radius: 5pt;
+  &:hover {
+    background-color: #EEEEEE;
+  }
+  &.small {
+    font-size: 0.7rem;
+    &:hover {
+      background-color: #444444;
+    }
+  }
+  &.big {
+    padding: 2rem;
+  }
+  &.red {
+    background-color: red;
+  }
+}
+
+a {
+  color: blue;
+  &:hover { color: red }
+}

@@ -1,0 +1,12 @@
+@import 'palette';
+
+body.static {
+
+}
+
+body#static_index {
+  background-color: $color1;
+
+  p { font-size: 2rem; }
+
+}
