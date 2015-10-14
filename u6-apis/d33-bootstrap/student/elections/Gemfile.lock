@@ -69,8 +69,14 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+<<<<<<< HEAD
     jquery-turbolinks (0.2.1)
       rails (>= 3.1.0)
+=======
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
+>>>>>>> 2898c00c72f0e53e94b3cc50e85788dc8db5a0bb
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -154,7 +160,11 @@ DEPENDENCIES
   faker
   jbuilder (~> 2.0)
   jquery-rails
+<<<<<<< HEAD
   jquery-turbolinks (~> 0.2.1)
+=======
+  jquery-turbolinks
+>>>>>>> 2898c00c72f0e53e94b3cc50e85788dc8db5a0bb
   pg
   rails (= 4.2.4)
   sass-rails (~> 5.0)

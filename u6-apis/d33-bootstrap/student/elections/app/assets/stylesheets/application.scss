@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+<<<<<<< HEAD
  * require_tree .
  * require_self
  */
@@ -27,3 +28,9 @@ button.btn.btn-primary {
   background-color:  $color;
   color: black;
 }
+=======
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+>>>>>>> 2898c00c72f0e53e94b3cc50e85788dc8db5a0bb

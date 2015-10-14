@@ -28,6 +28,7 @@ $(function() {
 		});
 	});
 
+<<<<<<< HEAD
 	$('input[name="commit"]').click(function(event){
 			event.preventDefault();
 			var candidateAttr = {
@@ -53,3 +54,38 @@ $(function() {
 	});
 
 });
+=======
+	$('input[name="commit"]').click(function(event) {
+		event.preventDefault();
+		var candidateAttr = {
+			first_name: $('#candidate_first_name').val(),
+			last_name: $('#candidate_last_name').val(),
+			bio: $('#candidate_bio').val(),
+			party: $('#candidate_party').val(),
+			campaign: $('#candidate_campaign').val()
+		};
+
+		$.ajax({
+			url: '/candidates',
+			method: 'POST',
+			data: {candidate: candidateAttr},
+			success: function(result, status) {
+				console.log('result', result);
+			},
+			error: function(a, v, c) {
+				console.log('error', c);
+			}
+		})
+	});
+});
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 2898c00c72f0e53e94b3cc50e85788dc8db5a0bb

@@ -1,0 +1,67 @@
+# Lesson Plan
+
+## Agenda
+- Two Model CRUD
+- SQL JOINS
+
+## Learning Objectives
+- SWBAT Explain the difference between an INNER and LEFT JOIN.
+- SWBAT Build associations between records using Foreign Keys
+- SWBAT Combine data from two tables into a single result-set
+
+# Refresher
+
+I've prepared a Sinatra application for you, complete with a `schema.sql` and a `seeds.sql`.  First
+thing, familiarize yourself with all of the code. Build the database, and run the server.
+
+#### Step 1: Implement GET /users
+This route should display a list of all of the users.
+
+#### Step 2: Implement GET /users/:id
+This route should display the properties of a user.
+
+#### Step 3: Implement POST /users
+This route should create a new user record.  Create the sign up form on `GET /users`.
+
+#### Step 4: Implement GET /tweets (CODE-ALONG)
+This route shows all the tweets.  Use a JOIN to include the name of the user.
+
+#### Step 5: Implement GET /tweets/:id (YOU DO)
+This route shows a single tweet.  Use a JOIN to include the name of the user.
+
+# SQL JOINs
+
+Break to talk about the different kinds of JOINS you can do.
+Try out each JOIN using the homepage `GET /` to demonstrate them.
+
+- [Student Reading](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins)
+- [Student Reading 2](http://www.postgresql.org/docs/9.3/static/queries-table-expressions.html)
+
+#### Step 6: Implement DELETE /users (YOU DO)
+
+# Foreign Keys
+
+What happens to a users tweets after I delete a user?  How can we ensure that whenever a user is
+deleted, all of the users tweets are deleted as well?
+
+Modify `schema.sql` adding `REFERENCES users(id)`.
+
+```sql
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  email VARCHAR NOT NULL,
+  created_at TIMESTAMP NOT NULL
+);
+
+CREATE TABLE tweets (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id),
+  message VARCHAR NOT NULL,
+  created_at TIMESTAMP NOT NULL
+);
+```
+
+#### Step 7: Implement UPDATE /tweet/:id
+
+#### Step 8: Students Finish Implementation
