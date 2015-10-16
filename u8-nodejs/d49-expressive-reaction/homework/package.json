@@ -1,0 +1,15 @@
+{
+  "name": "monsters",
+  "version": "1.0.0",
+  "description": "![Interview with the Vampire](https://mischiefmanagedsite.files.wordpress.com/2014/05/3.gif)",
+  "main": "populateVampires.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongodb": "^2.0.46"
+  }
+}

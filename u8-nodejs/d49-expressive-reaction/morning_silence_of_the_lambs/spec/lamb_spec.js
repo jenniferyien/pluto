@@ -41,4 +41,14 @@ describe('Lamb', function() {
     });
   });
 
+  describe("when there's no wool left, do not skin the lamb, that'd be mean", function(){
+    it('doesnt remove wool if already completely sheered', function(){
+      lamb.sheer();
+      lamb.sheer();
+      lamb.sheer();
+      lamb.sheer();
+      expect (lamb.bagnum).toEqual(0);
+    })
+  })
+
 });
