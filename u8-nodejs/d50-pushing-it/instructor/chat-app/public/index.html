@@ -13,7 +13,33 @@
   <script src="/socket.io/socket.io.js"></script>
 
   <script>
-   //socket code here
+    var socket   = io();
+    var $name    = $("#name");
+    var $message = $("#message");
+
+     socket.on('hello', function(message){
+        console.log("server", message.message);
+        console.log('hello from server, ' + "the admin is " + message.admin);
+     });
+
+     $("#send").on('click', function(event){
+        socket.emit('CLICK', { name: $name.val(), message: $message.val() });
+        $message.val('');
+     });
+
+     socket.on("christmas", function(gift){
+        $("<p>").text( gift.name + ": " + gift.message ).appendTo(document.body);
+     });// christmas
+
   </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
