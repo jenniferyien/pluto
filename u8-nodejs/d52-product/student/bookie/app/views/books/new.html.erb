@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>New Book</h1>
+
+  <%= form_for(@book) do |form| %>
+    <%= render form %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Cancel', books_path, class: 'btn' %>
+</div>

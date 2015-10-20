@@ -1,0 +1,35 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <%= form_tag books_path, method: :get, style: 'float: right; line-height: 5em;' do %>
+    <%= label_tag :search, "Search:" %>
+    <%= search_field_tag :search, params[:search], class: 'form-control', style: 'width: auto; display: inline-block;' %>
+  <% end %>
+
+  <h1>Publisher Admin</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @books.each do |book| %>
+        <tr>
+          <td width="50%"><%= link_to book.name, book %></td>
+          <td><%= book.author %></td>
+          <td><%= link_to 'Edit', edit_book_path(book) %></td>
+          <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= paginate @books %>
+</div>

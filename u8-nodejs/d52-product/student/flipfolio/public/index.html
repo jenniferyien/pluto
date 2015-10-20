@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Flipfolio Ebook Reader</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <style>
+    .page {
+      float: left;
+      border: solid black 1px;
+      width: 50%; height: 55rem;
+      padding: 0.5rem 1rem;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      overflow: hidden;
+    }
+    .page.right { cursor: e-resize; border-left: none; }
+    .page.left  { cursor: w-resize; }
+  </style>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    // Native jQuery.ready() event (feel free to add jQuery)
+    window.addEventListener('DOMContentLoaded', function() {
+      // Connect to Socket.io
+      var socket = io();
+      // Grab some elements from the page
+      var leftPage  = document.getElementById('left_page');
+      var rightPage = document.getElementById('right_page');
+      // When the server asks me to identify myself
+      socket.on('identify', function() {
+        // Ask the server to send me the book from the given URL
+        socket.emit('open', {book_url: ''})
+      })
+      // When the servers sends updated page data
+      socket.on('update', function(page) {
+        // Update the page with the new content
+        leftPage.innerHTML  = page.left
+        rightPage.innerHTML = page.right
+      })
+      // Clicking on the left/right pages turn them
+      leftPage.onclick  = function() { socket.emit('prev page') }
+      rightPage.onclick = function() { socket.emit('next page') }
+    })
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Flipfolio</h1>
+  <div id="left_page" class="left page"></div>
+  <div id="right_page" class="right page"></div>
+</div>
+
+</body>
+</html>
